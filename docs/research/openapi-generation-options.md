@@ -1,0 +1,40 @@
+# Pact Broker OpenAPI generation options
+
+Investigated 2026-10-23 against upstream commit `e27e1135f7398cd05ac8bbad9698eae15f9c4d0a`.
+
+## Recommendation
+
+Use a small Broker-specific Ruby extractor as the primary generator. Discover paths and methods through the existing Webmachine route introspection, reuse the existing OpenAPI components, and derive request shapes from the resource's selected validation contract. Enrich response schemas from actual Rack test exchanges and serializer definitions. This is a recommendation based on the source evidence below; no surveyed library automatically understands Broker's complete Webmachine/Representable/dry-validation model.
+
+Keep generation separate from runtime application code. Any temporary annotations should describe only facts that cannot be discovered, preferably next to the relevant resource or decorator. Store their reproducible patch or annotation inputs in this frontend repository. Do not duplicate the route list manually.
+
+## Source evidence
+
+- Routes are registered with `add [segments], ResourceClass, bindings` inside `PactBroker.build_api`. Symbol segments are path parameters, and bindings include resource names and deprecation flags. [API route registration](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/lib/pact_broker/api.rb).
+- `Webmachine::DescribeRoutes` already provides path specifications, concrete allowed methods, resource classes and source locations. It instantiates each resource for each HTTP method and asks for its private `schema`, where available. It excludes the development trace resource and removes `OPTIONS`. This is a stronger inventory than a text-only route parser. [Introspection implementation](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/lib/webmachine/describe_routes.rb).
+- `pact_broker:routes` creates and migrates a temporary SQLite database before introspection. Reuse this bootstrapping when dependencies are available; do not require a production Broker database. [Rake task](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/tasks/development.rake).
+- Request contracts use dry-validation, including optional keys, nullable values, and numeric constraints. A conversion must preserve these distinctions rather than assume all observed fields are required. [Pagination contract](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/lib/pact_broker/api/contracts/pagination_query_params_schema.rb).
+- The existing OpenAPI document is 3.0.0. Treat it as reusable evidence, then normalize nullable schemas and other version differences for 3.1. [Existing document](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/pact_broker_oas.yaml).
+- Serializer definitions include property aliases, embedded collections and conditional HAL links. Responses cannot safely be inferred solely from Ruby model attributes. [Pacticipant decorator](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/lib/pact_broker/api/decorators/pacticipant_decorator.rb).
+
+## Library assessment
+
+| Library                                                       | Evidence and fit                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [rspec-openapi](https://github.com/exoego/rspec-openapi)      | Captures existing request specs without a new endpoint DSL, supports Rack::Test exchanges and configurable OpenAPI 3.1 output. Best candidate for response/example enrichment. Coverage remains limited to exercised requests; sample inference cannot prove requiredness or all status branches. Pin a tested release rather than relying on evolving defaults.          |
+| [openapi_ruby](https://github.com/openapi-ruby/openapi-ruby)  | Documents Rack, Sinatra, RSpec and OpenAPI 3.1 support with Ruby >=3.2. A viable general toolkit, but its API definitions and schema classes still require annotations; it does not discover Webmachine resources automatically. Broker also requires Ruby >=3.2 at this commit.                                                                                          |
+| [rswag](https://github.com/rswag/rswag)                       | Its documented workflow extends rspec-rails request specs and uses Rails generators/engines. It is not a drop-in choice for this application, and adopting its DSL would duplicate route definitions.                                                                                                                                                                     |
+| [swagger-blocks](https://github.com/fotinakis/swagger-blocks) | Framework-independent annotations work in plain Ruby, but the project advertises Swagger 2.0 and was archived in August 2026. Poor fit for a new OpenAPI 3.1 generator.                                                                                                                                                                                                   |
+| [openapi_first](https://github.com/ahx/openapi_first)         | Validates OpenAPI 3.0/3.1 requests and responses through Rack and tests. Suitable for accuracy checks after generation, not source discovery. Broker already loads it from its test helper when OAS coverage checking is enabled. [Broker test helper](https://github.com/pact-foundation/pact_broker/blob/e27e1135f7398cd05ac8bbad9698eae15f9c4d0a/spec/spec_helper.rb). |
+| [Committee](https://github.com/interagent/committee)          | Rack request/response validation and rack-test assertions. An alternative validation layer, not an endpoint or serializer generator. Prefer Broker's existing validation tooling to minimize additions.                                                                                                                                                                   |
+
+## Accuracy and coverage rules
+
+1. Export a machine-readable inventory of every discovered path/method and compare its operation keys with generated OpenAPI. Record aliases, deprecated routes and deliberate exclusions.
+2. Keep route coverage separate from schema completeness and runtime test coverage. A path with an unconstrained response is discovered but not strongly typed.
+3. Preserve source/test provenance per operation and explicitly list unresolved body shapes, status codes, headers, conditional representations and custom validation rules. An unknown field must remain unknown rather than receive an invented type.
+4. Do not derive required properties from one fixture or assume every `GET` returns 200. Test empty collections, missing resources, malformed input, authenticated and unauthenticated access, pagination, and null/conditional fields.
+5. Validate actual Rack exchanges against the generated 3.1 document, and ensure representative HAL `_links` and `_embedded` payloads pass. Preserve unknown HAL relations for forward compatibility.
+6. Record upstream SHA, generator version, commands and runtime availability. When Ruby tests cannot run, report that as a validation gap rather than claiming runtime accuracy.
+
+This note assesses options; it does not claim that any library has been installed or that upstream Ruby tests have been executed.

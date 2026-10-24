@@ -1,0 +1,11 @@
+node_modules
+.next
+/openapi/
+src/lib/api/schema.d.ts
+src/lib/demo/responses.json
+package-lock.json
+docs/screenshots
+.impeccable/review
+dist
+
+next-env.d.ts

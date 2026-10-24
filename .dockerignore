@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+.git
+.env*
+!.env.example
+test-results
+playwright-report
+.impeccable/review
+docs/screenshots

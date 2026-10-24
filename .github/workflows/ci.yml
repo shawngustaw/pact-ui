@@ -1,0 +1,79 @@
+name: Validate
+on: [push, pull_request]
+jobs:
+  application:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run api:validate
+      - run: npm run api:check
+      - run: npm run api:coverage
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: browser-test-results
+          path: test-results/
+  broker-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+      - run: npm ci
+      - name: Prepare pinned OSS Broker
+        run: |
+          git clone https://github.com/pact-foundation/pact_broker.git /tmp/pact-broker
+          cd /tmp/pact-broker
+          git checkout e27e1135f7398cd05ac8bbad9698eae15f9c4d0a
+          cp "$GITHUB_WORKSPACE/tools/openapi/upstream.Gemfile.lock" Gemfile.lock
+          bundle config set path /tmp/pact-gems
+          bundle install
+      - name: Run real seeded OSS Broker integration tests
+        run: |
+          cd /tmp/pact-broker
+          PACT_UI_SERVE=true bundle exec ruby -Ilib "$GITHUB_WORKSPACE/tools/demo/capture.rb" /tmp/fixtures.json > /tmp/broker.log 2>&1 &
+          broker_pid=$!
+          trap 'kill "$broker_pid" || true' EXIT
+          cd "$GITHUB_WORKSPACE"
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:9293/ > /dev/null; then break; fi
+            sleep 1
+          done
+          PACT_TEST_BROKER_URL=http://127.0.0.1:9293 npm run test:integration
+  docker-broker-e2e:
+    name: Real Broker Docker end-to-end
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Test Docker UI against authenticated Pact Broker and PostgreSQL
+        run: npm run test:docker
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: real-broker-docker-test-results
+          path: test-results/
+      - name: Clean up disposable Docker stack
+        if: always()
+        run: docker compose -p pact-ui-real-e2e -f tools/testing/compose.real.yaml down --volumes --remove-orphans

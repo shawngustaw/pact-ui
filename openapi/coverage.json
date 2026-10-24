@@ -1,0 +1,3570 @@
+{
+  "upstream": "e27e1135f7398cd05ac8bbad9698eae15f9c4d0a",
+  "routes": 104,
+  "operations": 259,
+  "observations": 1063,
+  "observedOperations": 140,
+  "successfulOperations": 136,
+  "schemaEvidenceOperations": 132,
+  "successfulEvidenceOperations": 129,
+  "coverage": [
+    {
+      "path": "/",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Index",
+      "observations": 13,
+      "schemaEvidence": 13,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Index",
+      "observations": 1,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/can-i-deploy",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CanIDeploy",
+      "observations": 18,
+      "schemaEvidence": 17,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/can-i-deploy",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CanIDeploy",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/contracts/publish",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::PublishContracts",
+      "observations": 24,
+      "schemaEvidence": 23,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400",
+        "406",
+        "409"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/contracts/publish",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PublishContracts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/dashboard",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Dashboard",
+      "observations": 8,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/dashboard",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Dashboard",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/dashboard/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Dashboard",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/dashboard/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Dashboard",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/deployed-versions/{uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::DeployedVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/deployed-versions/{uuid}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::DeployedVersion",
+      "observations": 8,
+      "schemaEvidence": 8,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "422"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/deployed-versions/{uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::DeployedVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/environments",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Environments",
+      "observations": 5,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::Environments",
+      "observations": 5,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Environments",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/environments/{environment_uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Environment",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments/{environment_uuid}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Environment",
+      "observations": 5,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments/{environment_uuid}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Environment",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments/{environment_uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Environment",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/environments/{environment_uuid}/deployed-versions/currently-deployed",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CurrentlyDeployedVersionsForEnvironment",
+      "observations": 6,
+      "schemaEvidence": 6,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments/{environment_uuid}/deployed-versions/currently-deployed",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CurrentlyDeployedVersionsForEnvironment",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/environments/{environment_uuid}/released-versions/currently-supported",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CurrentlySupportedVersionsForEnvironment",
+      "observations": 4,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/environments/{environment_uuid}/released-versions/currently-supported",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CurrentlySupportedVersionsForEnvironment",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/groups/{pacticipant_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Group",
+      "observations": 13,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/groups/{pacticipant_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Group",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/integrations",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Integrations",
+      "observations": 14,
+      "schemaEvidence": 10,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/integrations",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Integrations",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/integrations",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Integrations",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/integrations/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Integration",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/integrations/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Integration",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/labels",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Labels",
+      "observations": 5,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/labels",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Labels",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/matrix",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Matrix",
+      "observations": 18,
+      "schemaEvidence": 14,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400",
+        "500"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/matrix",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Matrix",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/matrix/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::MatrixForConsumerAndProvider",
+      "observations": 7,
+      "schemaEvidence": 7,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/matrix/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::MatrixForConsumerAndProvider",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/matrix/provider/{provider_name}/latest/{provider_tag}/consumer/{consumer_name}/latest/{tag}/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::MatrixBadge",
+      "observations": 8,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "500"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/matrix/provider/{provider_name}/latest/{provider_tag}/consumer/{consumer_name}/latest/{tag}/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::MatrixBadge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/metrics",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Metrics",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/metrics",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Metrics",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified.",
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified.",
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pact/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Pacticipants",
+      "observations": 8,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::Pacticipants",
+      "observations": 14,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Pacticipants",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Pacticipant",
+      "observations": 10,
+      "schemaEvidence": 6,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Pacticipant",
+      "observations": 10,
+      "schemaEvidence": 7,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404",
+        "415"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::Pacticipant",
+      "observations": 15,
+      "schemaEvidence": 12,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201",
+        "500"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Pacticipant",
+      "observations": 5,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "204",
+        "404",
+        "500"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Pacticipant",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PacticipantBranches",
+      "observations": 8,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::PacticipantBranches",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "202"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PacticipantBranches",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Branch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Branch",
+      "observations": 6,
+      "schemaEvidence": 6,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Branch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/latest-version",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVersion",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/latest-version",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/latest-version/can-i-deploy/to-environment/{environment_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByBranchToEnvironment",
+      "observations": 2,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/latest-version/can-i-deploy/to-environment/{environment_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByBranchToEnvironment",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/latest-version/can-i-deploy/to-environment/{environment_name}/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByBranchToEnvironmentBadge",
+      "observations": 10,
+      "schemaEvidence": 1,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [
+        "307"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/latest-version/can-i-deploy/to-environment/{environment_name}/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByBranchToEnvironmentBadge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::BranchVersions",
+      "observations": 11,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::BranchVersions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/versions/{version_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::BranchVersion",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/versions/{version_number}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::BranchVersion",
+      "observations": 8,
+      "schemaEvidence": 8,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/versions/{version_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::BranchVersion",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/branches/{branch_name}/versions/{version_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::BranchVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/deployed-or-released/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::DeployedOrReleasedVersions",
+      "observations": 17,
+      "schemaEvidence": 6,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/deployed-or-released/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::DeployedOrReleasedVersions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/environments/{environment_uuid}/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::EnvironmentVersions",
+      "observations": 26,
+      "schemaEvidence": 12,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/environments/{environment_uuid}/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::EnvironmentVersions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/labels/{label_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Label",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/labels/{label_name}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Label",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/labels/{label_name}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Label",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/labels/{label_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Label",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version/{tag}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version/{tag}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version/{tag}/can-i-deploy/to/{to}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByTagToTag",
+      "observations": 3,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version/{tag}/can-i-deploy/to/{to}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByTagToTag",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version/{tag}/can-i-deploy/to/{to}/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByTagToTagBadge",
+      "observations": 5,
+      "schemaEvidence": 2,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [
+        "307"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/latest-version/{tag}/can-i-deploy/to/{to}/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CanIDeployPacticipantVersionByTagToTagBadge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/main-branch/can-i-merge/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::CanIMergeBadge",
+      "observations": 4,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [
+        "307"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/main-branch/can-i-merge/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::CanIMergeBadge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/tags/{tag_name}/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::TagVersions",
+      "observations": 9,
+      "schemaEvidence": 6,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/tags/{tag_name}/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::TagVersions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Versions",
+      "observations": 12,
+      "schemaEvidence": 8,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Versions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Version",
+      "observations": 34,
+      "schemaEvidence": 30,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Version",
+      "observations": 8,
+      "schemaEvidence": 7,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::Version",
+      "observations": 9,
+      "schemaEvidence": 9,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Version",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Version",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/deployed-versions/environment/{environment_uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::DeployedVersionsForVersionAndEnvironment",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/deployed-versions/environment/{environment_uuid}",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::DeployedVersionsForVersionAndEnvironment",
+      "observations": 14,
+      "schemaEvidence": 14,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/deployed-versions/environment/{environment_uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::DeployedVersionsForVersionAndEnvironment",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/released-versions/environment/{environment_uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ReleasedVersionsForVersionAndEnvironment",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/released-versions/environment/{environment_uuid}",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::ReleasedVersionsForVersionAndEnvironment",
+      "observations": 13,
+      "schemaEvidence": 13,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/released-versions/environment/{environment_uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ReleasedVersionsForVersionAndEnvironment",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/tags/{tag_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Tag",
+      "observations": 3,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/tags/{tag_name}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Tag",
+      "observations": 48,
+      "schemaEvidence": 40,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/tags/{tag_name}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Tag",
+      "observations": 5,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "204",
+        "404",
+        "500"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/{pacticipant_name}/versions/{pacticipant_version_number}/tags/{tag_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Tag",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacticipants/label/{label_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PacticipantsForLabel",
+      "observations": 7,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacticipants/label/{label_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PacticipantsForLabel",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestPacts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestPacts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderPacts",
+      "observations": 9,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderPacts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForConsumerBranch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForConsumerBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch/{branch_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForConsumerBranch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch/{branch_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForConsumerBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch/{branch_name}/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestProviderPactsForBranch",
+      "observations": 3,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch/{branch_name}/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestProviderPactsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestProviderPactsForBranch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/branch/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestProviderPactsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}/latest/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}/latest/versions",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/{branch_name}/latest/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/latest/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/latest/versions",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/latest/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/versions",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/branch/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersionsForBranch",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest-untagged",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest-untagged",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest-untagged/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Badge",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest-untagged/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Badge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 11,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Badge",
+      "observations": 4,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Badge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}/verification-results/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForLatestPact",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}/verification-results/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForLatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/{tag}/verification-results/latest",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForLatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/badge",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Badge",
+      "observations": 22,
+      "schemaEvidence": 6,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "307",
+        "401"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/badge",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Badge",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/verification-results/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForLatestPact",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/verification-results/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForLatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/latest/verification-results/latest",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForLatestPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersion",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/diff/pact-version/{comparison_pact_version_sha}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactContentDiff",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/diff/pact-version/{comparison_pact_version_sha}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactContentDiff",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersion",
+      "observations": 21,
+      "schemaEvidence": 21,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}/verification-results",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::Verifications",
+      "observations": 32,
+      "schemaEvidence": 21,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201",
+        "400",
+        "404",
+        "500"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}/verification-results",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Verifications",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}/verification-results/{verification_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Verification",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}/verification-results/{verification_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Verification",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/metadata/{metadata}/verification-results/{verification_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Verification",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::Verifications",
+      "observations": 15,
+      "schemaEvidence": 15,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Verifications",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/{verification_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Verification",
+      "observations": 7,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/{verification_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Verification",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/{verification_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Verification",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/{verification_number}/triggered-webhooks",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::VerificationTriggeredWebhooks",
+      "observations": 6,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/{verification_number}/triggered-webhooks",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::VerificationTriggeredWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForPact",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/pact-version/{pact_version_sha}/verification-results/latest",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/tag/{tag}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::TaggedPactVersions",
+      "observations": 3,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/tag/{tag}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::TaggedPactVersions",
+      "observations": 6,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/tag/{tag}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::TaggedPactVersions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 55,
+      "schemaEvidence": 50,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201",
+        "400",
+        "409",
+        "500"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 8,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 12,
+      "schemaEvidence": 7,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201",
+        "400",
+        "409"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/diff/previous-distinct",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactContentDiff",
+      "observations": 6,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "408"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/diff/previous-distinct",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactContentDiff",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/diff/version/{comparison_consumer_version}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactContentDiff",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/diff/version/{comparison_consumer_version}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactContentDiff",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/previous-distinct",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PreviousDistinctPactVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/previous-distinct",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PreviousDistinctPactVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/triggered-webhooks",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactTriggeredWebhooks",
+      "observations": 6,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/triggered-webhooks",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactTriggeredWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/verification-results/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForPact",
+      "observations": 1,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/verification-results/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/version/{consumer_version_number}/verification-results/latest",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::LatestVerificationForPact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactVersions",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::PactVersions",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactVersions",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions/{consumer_version_number}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 5,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions/{consumer_version_number}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 5,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions/{consumer_version_number}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions/{consumer_version_number}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified.",
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/versions/{consumer_version_number}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Pact",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/webhooks",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::PactWebhooks",
+      "observations": 4,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/webhooks",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/webhooks",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/webhooks/status",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PactWebhooksStatus",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/consumer/{consumer_name}/webhooks/status",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PactWebhooksStatus",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/for-verification",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForVerification",
+      "observations": 7,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/for-verification",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForVerification",
+      "observations": 46,
+      "schemaEvidence": 44,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/for-verification",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderPactsForVerification",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestProviderPacts",
+      "observations": 4,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestProviderPacts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/latest/{tag}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestProviderPacts",
+      "observations": 6,
+      "schemaEvidence": 4,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/latest/{tag}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestProviderPacts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/provider-states",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderStates",
+      "observations": 12,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/provider-states",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderStates",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/provider-states/branch/{branch_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderStates",
+      "observations": 8,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/provider-states/branch/{branch_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderStates",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/provider-states/environment/{environment_uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderStates",
+      "observations": 8,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/provider-states/environment/{environment_uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderStates",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/tag/{tag}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ProviderPacts",
+      "observations": 4,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/pacts/provider/{provider_name}/tag/{tag}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ProviderPacts",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/relationships",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Relationships",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/relationships",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Relationships",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/released-versions/{uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ReleasedVersion",
+      "observations": 2,
+      "schemaEvidence": 1,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/released-versions/{uuid}",
+      "method": "PATCH",
+      "resource": "PactBroker::Api::Resources::ReleasedVersion",
+      "observations": 8,
+      "schemaEvidence": 8,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "422"
+      ],
+      "gaps": [
+        "Request shape is example-derived or unknown; no dry-validation contract detected."
+      ]
+    },
+    {
+      "path": "/released-versions/{uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ReleasedVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/test/error",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::ErrorTest",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/test/error",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::ErrorTest",
+      "observations": 4,
+      "schemaEvidence": 4,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [
+        "500"
+      ],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/test/error",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::ErrorTest",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/triggered-webhooks/{uuid}/logs",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::TriggeredWebhookLogs",
+      "observations": 3,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/triggered-webhooks/{uuid}/logs",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::TriggeredWebhookLogs",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/verification-results/consumer/{consumer_name}/version/{consumer_version_number}/latest",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::LatestVerificationsForConsumerVersion",
+      "observations": 8,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/verification-results/consumer/{consumer_name}/version/{consumer_version_number}/latest",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::LatestVerificationsForConsumerVersion",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/webhooks",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::AllWebhooks",
+      "observations": 5,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::AllWebhooks",
+      "observations": 25,
+      "schemaEvidence": 16,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::AllWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/{uuid}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::Webhook",
+      "observations": 7,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/{uuid}",
+      "method": "PUT",
+      "resource": "PactBroker::Api::Resources::Webhook",
+      "observations": 17,
+      "schemaEvidence": 10,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "201",
+        "400",
+        "500"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/{uuid}",
+      "method": "DELETE",
+      "resource": "PactBroker::Api::Resources::Webhook",
+      "observations": 3,
+      "schemaEvidence": 3,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "204"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/{uuid}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::Webhook",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/{uuid}/execute",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::WebhookExecution",
+      "observations": 18,
+      "schemaEvidence": 11,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": [
+        "Request media type not inferred."
+      ]
+    },
+    {
+      "path": "/webhooks/{uuid}/execute",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::WebhookExecution",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/consumer/{consumer_name}",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/webhooks/consumer/{consumer_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 4,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/consumer/{consumer_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/execute",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::WebhookExecution",
+      "observations": 5,
+      "schemaEvidence": 5,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "400"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/execute",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::WebhookExecution",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/provider/{provider_name}",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    },
+    {
+      "path": "/webhooks/provider/{provider_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 4,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/provider/{provider_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "POST",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 22,
+      "schemaEvidence": 7,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "201",
+        "400",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "GET",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 7,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/webhooks/provider/{provider_name}/consumer/{consumer_name}",
+      "method": "OPTIONS",
+      "resource": "PactBroker::Api::Resources::PacticipantWebhooks",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/diagnostic/status/heartbeat",
+      "method": "GET",
+      "resource": "PactBroker::Diagnostic::Resources::Heartbeat",
+      "observations": 2,
+      "schemaEvidence": 2,
+      "successfulEvidence": true,
+      "successful": true,
+      "statuses": [
+        "200",
+        "404"
+      ],
+      "gaps": []
+    },
+    {
+      "path": "/diagnostic/status/dependencies",
+      "method": "GET",
+      "resource": "PactBroker::Diagnostic::Resources::Dependencies",
+      "observations": 0,
+      "schemaEvidence": 0,
+      "successfulEvidence": false,
+      "successful": false,
+      "statuses": [],
+      "gaps": [
+        "No successful feature/integration response observed; response schema/status remains unverified."
+      ]
+    }
+  ],
+  "unmatched": [
+    {
+      "method": "GET",
+      "path": "/pacts/provider/Provider/consumer/Consumer/versions/1/diff/previous-distinct",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/favicon.ico",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/ui/relationships/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/doc/webhooks",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/pacticipants/Some%20Consumer/network",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/foo",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/something",
+      "status": 303
+    },
+    {
+      "method": "GET",
+      "path": "/something",
+      "status": 404
+    },
+    {
+      "method": "GET",
+      "path": "/stylesheets/pact.css",
+      "status": 200
+    }
+  ]
+}

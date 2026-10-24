@@ -1,0 +1,43 @@
+# Disposable test stack. Credentials below are test-only, and ports bind to localhost.
+services:
+  db:
+    image: postgres:17-alpine@sha256:eee6c6e1b0894fa4fe0075eb054af9fd1cf39a35321c2d4110626cfe506411fb
+    environment:
+      POSTGRES_DB: pact
+      POSTGRES_USER: pact
+      POSTGRES_PASSWORD: database-test-only
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U pact -d pact']
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  broker:
+    image: pactfoundation/pact-broker@sha256:420341d4fbfb00a621c313f47e530ad75703f969bbc7520d0d72bc71bb53cef9
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - '127.0.0.1:9296:9292'
+    environment:
+      PACT_BROKER_DATABASE_URL: postgres://pact:database-test-only@db/pact
+      PACT_BROKER_BASE_URL: http://broker:9292
+      PACT_BROKER_BASIC_AUTH_USERNAME: admin-test
+      PACT_BROKER_BASIC_AUTH_PASSWORD: writer-test-only
+      PACT_BROKER_BASIC_AUTH_READ_ONLY_USERNAME: reader-test
+      PACT_BROKER_BASIC_AUTH_READ_ONLY_PASSWORD: reader-test-only
+      PACT_BROKER_ALLOW_PUBLIC_READ: 'false'
+      PACT_BROKER_SEED_EXAMPLE_DATA: 'false'
+      PACT_BROKER_LOG_LEVEL: WARN
+  pact-ui:
+    build:
+      context: ../..
+    image: pact-ui:real-e2e
+    depends_on:
+      - broker
+    ports:
+      - '127.0.0.1:3002:3000'
+    environment:
+      PACT_BROKER_URL: http://broker:9292
+      PACT_UI_DEMO: 'false'

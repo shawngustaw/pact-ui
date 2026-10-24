@@ -1,0 +1,9 @@
+extends:
+  - recommended
+rules:
+  # A self-hosted API has no single production URL.
+  no-server-example.com: off
+  # Preserve reviewed serializer components, even if only indirectly used.
+  no-unused-components: off
+  # Unobserved error statuses are recorded under default, not invented.
+  operation-4xx-response: off
